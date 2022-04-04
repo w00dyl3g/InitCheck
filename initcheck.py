@@ -16,13 +16,13 @@ def check_ssh(hostname, username, password):
         hostname,port = hostname.split(":")[0],hostname.split(":")[1]
         #print(hostname, port)
         try:
-            _ssh.connect(hostname=hostname, port=port, username=username, password=password)
+            _ssh.connect(hostname=hostname, port=port, username=username, password=password,timeout=10)
             return True
         except:        
             return False
     else:
         try:
-            _ssh.connect(hostname=hostname, username=username, password=password)
+            _ssh.connect(hostname=hostname, username=username, password=password, timeout=10)
             return True
         except:        
             return False        
