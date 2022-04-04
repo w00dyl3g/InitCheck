@@ -1,0 +1,7 @@
+hosts: #edit (-host or -host:port)
+  - 127.0.0.1
+  - 127.0.0.2:1111
+credentials: {'root':'root','user':'user'} #edit
+checks: #edit (possible values: ping, ssh, http)
+  - ping
+  - ssh
