@@ -1,5 +1,7 @@
 import os, yaml, pprint, paramiko
-
+#support old or unsafe ciphers
+paramiko.Transport._preferred_kex = ('diffie-hellman-group-exchange-sha256','diffie-hellman-group14-sha256','diffie-hellman-group-exchange-sha1',
+'diffie-hellman-group14-sha1','diffie-hellman-group1-sha1')
 #init ssh
 _ssh = paramiko.SSHClient()
 _ssh.load_system_host_keys()
