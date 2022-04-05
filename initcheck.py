@@ -78,11 +78,11 @@ def export2xlsx():
     #init xlsx
     workbook = xlsxwriter.Workbook(filename)
     worksheet = workbook.add_worksheet(sheetname)
-    
+
     row = 1
     col = 0
     worksheet.write(0, 0, "Host")
-    worksheet.write(0, 1, "Result")
+    worksheet.write(0, 1, "Ping")
 
     #ping
     for host in output['ping']:
@@ -91,7 +91,7 @@ def export2xlsx():
         row += 1
     
     #ssh
-    col += 2 #blankspaces
+    col += 2 
     for cred in output['ssh']:
         worksheet.write(0, col, cred)
         row = 1  
