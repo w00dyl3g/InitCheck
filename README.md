@@ -32,7 +32,7 @@ $ python3 initcheck.py output.xlsx
 ## Yaml config file:
 
 ```yaml
-hosts: #edit (-host or -host:port)
+hosts: #edit (-host or -host:port(for ssh))
   - 127.0.0.1
   - 127.0.0.2:1111
 credentials: #edit
