@@ -35,9 +35,9 @@ $ python3 initcheck.py output.xlsx
 hosts: #edit (-host or -host:port(for ssh))
   - 127.0.0.1
   - 127.0.0.2:1111
-credentials: #edit
+credentials: #edit (format: [user,pw]), attention to BF attacks
   - ['user', 'resu']
-checks: #edit (possible values: ping, ssh, http)
+checks: #edit (possible values: ping, ssh)
   - ping
   - ssh
 ```
